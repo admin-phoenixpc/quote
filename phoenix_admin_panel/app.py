@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import json
 import os
 
-app = Flask(__name__, template_folder=".")
+app = Flask(__name__, template_folder="templates")
 
 DATA_FILE = "builds.json"
 
