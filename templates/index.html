@@ -11,11 +11,67 @@
       font-size: 13px;
     }
     label { font-weight: 600; margin-top: 8px; }
-    .form-section { border: 1px solid #ccc; padding: 10px; border-radius: 6px; margin-bottom: 15px; }
+    .form-section {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      background-color: #f8f9fa;
+    }
   </style>
 </head>
 <body>
   <h2 class="mb-4">Phoenix PC Build Admin Panel</h2>
-  <!-- FORM SCRIPT OMITTED FOR BREVITY --> 
+
+  <form id="buildForm" class="mb-4">
+    <div class="mb-3">
+      <label>Budget (INR)</label>
+      <input type="number" name="budget" class="form-control" required />
+    </div>
+
+    <div class="row">
+      <!-- Intel Section -->
+      <div class="col-md-6 form-section">
+        <h5>Intel Build</h5>
+        <input class="form-control" name="intel_cpu" placeholder="CPU" required />
+        <input class="form-control" name="intel_gpu" placeholder="GPU" required />
+        <input class="form-control" name="intel_ram" placeholder="RAM" required />
+        <input class="form-control" name="intel_ssd" placeholder="SSD" required />
+        <input class="form-control" name="intel_psu" placeholder="PSU" required />
+        <input class="form-control" name="intel_case" placeholder="Case" required />
+        <input class="form-control" name="intel_note" placeholder="Notes" />
+      </div>
+
+      <!-- AMD Section -->
+      <div class="col-md-6 form-section">
+        <h5>AMD Build</h5>
+        <input class="form-control" name="amd_cpu" placeholder="CPU" required />
+        <input class="form-control" name="amd_gpu" placeholder="GPU" required />
+        <input class="form-control" name="amd_ram" placeholder="RAM" required />
+        <input class="form-control" name="amd_ssd" placeholder="SSD" required />
+        <input class="form-control" name="amd_psu" placeholder="PSU" required />
+        <input class="form-control" name="amd_case" placeholder="Case" required />
+        <input class="form-control" name="amd_note" placeholder="Notes" />
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Save Build</button>
+  </form>
+
+  <script>
+    document.getElementById("buildForm").onsubmit = function (e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const payload = {};
+      formData.forEach((val, key) => payload[key] = val);
+
+      fetch("/api/builds", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      }).then(res => res.json())
+        .then(data => alert("✅ Build saved successfully!"));
+    };
+  </script>
 </body>
 </html>
