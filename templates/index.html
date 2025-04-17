@@ -13,10 +13,10 @@
     label { font-weight: 600; margin-top: 8px; }
     .form-section {
       border: 1px solid #ccc;
-      padding: 10px;
+      padding: 15px;
       border-radius: 6px;
       margin-bottom: 15px;
-      background-color: #f8f9fa;
+      background-color: #f9f9f9;
     }
   </style>
 </head>
@@ -34,24 +34,64 @@
       <div class="col-md-6 form-section">
         <h5>Intel Build</h5>
         <input class="form-control" name="intel_cpu" placeholder="CPU" required />
+        <input class="form-control" name="intel_cpu_price" placeholder="CPU Price" type="number" required />
+        <input class="form-control" name="intel_cpu_watt" placeholder="CPU Wattage" type="number" required />
+
         <input class="form-control" name="intel_gpu" placeholder="GPU" required />
+        <input class="form-control" name="intel_gpu_price" placeholder="GPU Price" type="number" required />
+        <input class="form-control" name="intel_gpu_watt" placeholder="GPU Wattage" type="number" required />
+
         <input class="form-control" name="intel_ram" placeholder="RAM" required />
+        <input class="form-control" name="intel_ram_price" placeholder="RAM Price" type="number" required />
+        <input class="form-control" name="intel_ram_watt" placeholder="RAM Wattage" type="number" required />
+
         <input class="form-control" name="intel_ssd" placeholder="SSD" required />
+        <input class="form-control" name="intel_ssd_price" placeholder="SSD Price" type="number" required />
+        <input class="form-control" name="intel_ssd_watt" placeholder="SSD Wattage" type="number" required />
+
+        <input class="form-control" name="intel_cooler" placeholder="Cooler" required />
+        <input class="form-control" name="intel_cooler_price" placeholder="Cooler Price" type="number" required />
+        <input class="form-control" name="intel_cooler_watt" placeholder="Cooler Wattage" type="number" required />
+
         <input class="form-control" name="intel_psu" placeholder="PSU" required />
+        <input class="form-control" name="intel_psu_price" placeholder="PSU Price" type="number" required />
+
         <input class="form-control" name="intel_case" placeholder="Case" required />
-        <input class="form-control" name="intel_note" placeholder="Notes" />
+        <input class="form-control" name="intel_case_price" placeholder="Case Price" type="number" required />
+
+        <input class="form-control" name="intel_note" placeholder="Intel Build Notes" />
       </div>
 
       <!-- AMD Section -->
       <div class="col-md-6 form-section">
         <h5>AMD Build</h5>
         <input class="form-control" name="amd_cpu" placeholder="CPU" required />
+        <input class="form-control" name="amd_cpu_price" placeholder="CPU Price" type="number" required />
+        <input class="form-control" name="amd_cpu_watt" placeholder="CPU Wattage" type="number" required />
+
         <input class="form-control" name="amd_gpu" placeholder="GPU" required />
+        <input class="form-control" name="amd_gpu_price" placeholder="GPU Price" type="number" required />
+        <input class="form-control" name="amd_gpu_watt" placeholder="GPU Wattage" type="number" required />
+
         <input class="form-control" name="amd_ram" placeholder="RAM" required />
+        <input class="form-control" name="amd_ram_price" placeholder="RAM Price" type="number" required />
+        <input class="form-control" name="amd_ram_watt" placeholder="RAM Wattage" type="number" required />
+
         <input class="form-control" name="amd_ssd" placeholder="SSD" required />
+        <input class="form-control" name="amd_ssd_price" placeholder="SSD Price" type="number" required />
+        <input class="form-control" name="amd_ssd_watt" placeholder="SSD Wattage" type="number" required />
+
+        <input class="form-control" name="amd_cooler" placeholder="Cooler" required />
+        <input class="form-control" name="amd_cooler_price" placeholder="Cooler Price" type="number" required />
+        <input class="form-control" name="amd_cooler_watt" placeholder="Cooler Wattage" type="number" required />
+
         <input class="form-control" name="amd_psu" placeholder="PSU" required />
+        <input class="form-control" name="amd_psu_price" placeholder="PSU Price" type="number" required />
+
         <input class="form-control" name="amd_case" placeholder="Case" required />
-        <input class="form-control" name="amd_note" placeholder="Notes" />
+        <input class="form-control" name="amd_case_price" placeholder="Case Price" type="number" required />
+
+        <input class="form-control" name="amd_note" placeholder="AMD Build Notes" />
       </div>
     </div>
 
